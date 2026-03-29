@@ -3,9 +3,11 @@ import { RouteObject } from 'react-router-dom';
 
 // Lazy load pages
 const Home = lazy(() => import('../pages/Home'));
+const Tools = lazy(() => import('../pages/Tools'));
 const DiffChecker = lazy(() => import('../tools/diff-checker/DiffChecker'));
 const ImageCompressor = lazy(() => import('../tools/image-compressor/ImageCompressor'));
 const JSONFormatter = lazy(() => import('../tools/json-formatter/JSONFormatter'));
+const RegexTester = lazy(() => import('../tools/regex-tester/RegexTester'));
 
 // Stub components for other tools
 const ToolStub = lazy(() => import('../components/ToolStub'));
@@ -14,6 +16,10 @@ export const routes: RouteObject[] = [
   {
     path: '/',
     element: <Home />,
+  },
+  {
+    path: '/tools',
+    element: <Tools />,
   },
   {
     path: '/tools/diff-checker',
@@ -37,6 +43,10 @@ export const routes: RouteObject[] = [
     element: <JSONFormatter />,
   },
   {
+    path: '/tools/regex-tester',
+    element: <RegexTester />,
+  },
+  {
     path: '/tools/url-encoder',
     element: <ToolStub title="URL Encoder" />,
   },
@@ -47,10 +57,6 @@ export const routes: RouteObject[] = [
   {
     path: '/tools/color-picker',
     element: <ToolStub title="Color Picker" />,
-  },
-  {
-    path: '/tools/regex-tester',
-    element: <ToolStub title="Regex Tester" />,
   },
   {
     path: '/tools/password-generator',
