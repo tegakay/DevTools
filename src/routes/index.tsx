@@ -5,6 +5,7 @@ import { RouteObject } from 'react-router-dom';
 const Home = lazy(() => import('../pages/Home'));
 const DiffChecker = lazy(() => import('../tools/diff-checker/DiffChecker'));
 const ImageCompressor = lazy(() => import('../tools/image-compressor/ImageCompressor'));
+const JSONFormatter = lazy(() => import('../tools/json-formatter/JSONFormatter'));
 
 // Stub components for other tools
 const ToolStub = lazy(() => import('../components/ToolStub'));
@@ -33,7 +34,7 @@ export const routes: RouteObject[] = [
   },
   {
     path: '/tools/json-formatter',
-    element: <ToolStub title="JSON Formatter" />,
+    element: <JSONFormatter />,
   },
   {
     path: '/tools/url-encoder',
