@@ -6,8 +6,14 @@ const Home = lazy(() => import('../pages/Home'));
 const Tools = lazy(() => import('../pages/Tools'));
 const DiffChecker = lazy(() => import('../tools/diff-checker/DiffChecker'));
 const ImageCompressor = lazy(() => import('../tools/image-compressor/ImageCompressor'));
+const SVGGenerator = lazy(() => import('../tools/svg-generator/SVGGenerator'));
+const FaviconGenerator = lazy(() => import('../tools/favicon-generator/FaviconGenerator'));
 const JSONFormatter = lazy(() => import('../tools/json-formatter/JSONFormatter'));
 const RegexTester = lazy(() => import('../tools/regex-tester/RegexTester'));
+const Base64Encoder = lazy(() => import('../tools/base64-encoder/Base64Encoder'));
+const URLEncoder = lazy(() => import('../tools/url-encoder/URLEncoder'));
+const ColorPicker = lazy(() => import('../tools/color-picker/ColorPicker'));
+const PasswordGenerator = lazy(() => import('../tools/password-generator/PasswordGenerator'));
 
 // Stub components for other tools
 const ToolStub = lazy(() => import('../components/ToolStub'));
@@ -32,11 +38,11 @@ export const routes: RouteObject[] = [
   // Stub routes for other tools
   {
     path: '/tools/svg-generator',
-    element: <ToolStub title="SVG Generator" />,
+    element: <SVGGenerator />,
   },
   {
     path: '/tools/favicon-generator',
-    element: <ToolStub title="Favicon Generator" />,
+    element: <FaviconGenerator />,
   },
   {
     path: '/tools/json-formatter',
@@ -48,19 +54,19 @@ export const routes: RouteObject[] = [
   },
   {
     path: '/tools/url-encoder',
-    element: <ToolStub title="URL Encoder" />,
+    element: <URLEncoder />,
   },
   {
     path: '/tools/base64-encoder',
-    element: <ToolStub title="Base64 Encoder" />,
+    element: <Base64Encoder />,
   },
   {
     path: '/tools/color-picker',
-    element: <ToolStub title="Color Picker" />,
+    element: <ColorPicker />,
   },
   {
     path: '/tools/password-generator',
-    element: <ToolStub title="Password Generator" />,
+    element: <PasswordGenerator />,
   },
   // Catch-all for any other tool routes
   {

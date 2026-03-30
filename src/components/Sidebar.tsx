@@ -18,7 +18,7 @@ const Sidebar = () => {
           All Tools
         </Link>
         <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Tools</h2>
-        <nav className="space-y-2 max-h-96 overflow-y-auto">
+        <nav className="space-y-2  overflow-y-auto">
           {toolsData.map((tool) => (
             <Link
               key={tool.path}
